@@ -41,4 +41,12 @@ div.sender-main .sender-img {
 div.sender-main .sender-main-date {
   color: #ccc; }
 
+.sender-body {
+  margin: 0 1em; }
+
+div.sender-reply h6 {
+  border-bottom: 1px solid rgba(67, 89, 102, 0.1); }
+div.sender-reply h6 span {
+  border-bottom: 1px solid #ccc; }
+
 /*# sourceMappingURL=custom.css.map */
