@@ -21586,9 +21586,10 @@ div.sender-main .sender-main-date {
 .sender-body {
   margin: 0 1em; }
 
-div.sender-reply h6 {
+div.sender-reply h6.sender-reply-option {
   border-bottom: 1px solid rgba(67, 89, 102, 0.1); }
-div.sender-reply h6 span {
-  border-bottom: 1px solid #ccc; }
+div.sender-reply h6.sender-reply-option span {
+  border-bottom: 1px solid #ccc;
+  margin-left: 1em; }
 
 /*# sourceMappingURL=style.css.map */
