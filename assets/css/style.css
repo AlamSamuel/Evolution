@@ -21591,7 +21591,12 @@ div.sender-reply h6.sender-reply-option {
 div.sender-reply h6.sender-reply-option span {
   border-bottom: 1px solid #ccc; }
 
-#usr-config > div.col-xs-12.col-md-7.col-lg-7.bord-left.bord-right > div.sender-reply > div.sender-reply-bottom > h6 > span.label.label-pill.label-primary {
-  margin-left: 1em !important; }
+div.sender-reply-bottom span {
+  margin-left: 1em; }
+div.sender-reply-bottom span:hover {
+  cursor: pointer; }
+
+div.sender-reply-body textarea {
+  border-color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
