@@ -7,7 +7,7 @@
         <meta name="author" content="Coderthemes">
 
         <!-- App Favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+       <!--  <link rel="shortcut icon" href="assets/images/favicon.ico"> -->
 
         <!-- App title -->
        <title>Evolution Community</title>
@@ -110,7 +110,7 @@ td.dataTables_empty {
     width: 105px !important;
 }
 
-span.timeline-icon.bg-danger {
+span.timeline-icon.bg-danger, span.timeline-icon.bg-success {
     -webkit-border-radius: 50%;
     background: #818a91;
     border-radius: 50%;
@@ -139,7 +139,12 @@ span.timeline-icon.bg-danger {
       .usu:hover {
     color: white;
     }
-
+.modal-footer.noline {
+    padding: 25px 0 10px;
+    text-align: right;
+    margin-top: 15px;
+    border-top: 1px solid #e5e5e5;
+}
 
  .logo_monkey {
         width: 45px;
@@ -152,9 +157,14 @@ span.timeline-icon.bg-danger {
         font-size: 45px;
     }
 
-.bg-danger {
+.bg-danger, .bg-success {
     
     display: flex !IMPORTANT;
+     -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .custom-modal-title.perfil{
@@ -174,13 +184,44 @@ p.inbox-item-date.perfil{
     margin-top: 60px !important;
 }
 
-p.inbox-item-date.informe{
-    
+p.inbox-item-date.informe {
     margin-top: 90px !important;
+    text-decoration: underline;
+    color: #039cfd !important;
 }
 
+.blurdiv {
+    width: 100%;
+    height: 100%;
+    background: rgba(92, 100, 108, 0.41);
+    position: absolute;
+    z-index: 1;
+    margin: -529px -20px;
+    display: none;
+}
+.blurdiv.out{
+    position: fixed;
+    z-index: 2;
+    margin: -20px 0;
+    display: block;
+}
+.modalask {
+    width: 365px;
+    margin: 21vh auto;
+}
+@media screen and (max-width: 490px) {
+p.inbox-item-date.perfil {
+    margin-top: 0 !important;
+}
 
+p.inbox-item-date.informe {
+    margin-top: 0 !important;
+}
+.inbox-widget .inbox-item .inbox-item-date{
+    position: initial;
+}
 
+}
 </style>
 
 
@@ -294,22 +335,39 @@ p.inbox-item-date.informe{
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="wrapper">
+         <div class="blurdiv out" style="position: fixed;z-index: 2;margin: -20px 0;display: none;">
+                                              <div class="modalask">
+                                               <div class="modal-content">
+                                        <div class="modal-header">
+                                           
+                                            Estas seguro que quieres eliminar este usuario?
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                      <div class="col-xs-12 col-sm-12">
+                                                            
+
+                                                        <div class="button-list">
+                                                          <button class="btn btn-primary waves-effect waves-light btn-md">SI</button>
+
+                                                          <button type="button" class="btn btn-secondary waves-effect waves-light btn-md cerrar">NO</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                        </div>
+                                    </div>
+                                              </div>
+                                            </div>
+
             <div class="container">
 
              <!-- Page-Title -->
             <div class="row">
                 <div class="col-sm-12">
                     <div class="btn-group pull-right m-t-15">
-                        <button type="button" class="btn btn-custom dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i
-                                    class="fa fa-cog"></i></span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
+                                              <a href="#custom-modal1" class="btn btn-primary waves-effect waves-light m-r-5 m-b-10" data-animation="fadein" data-plugin="custommodal"
+                                                data-overlaySpeed="200" data-overlayColor="#36404a">Agregar usuario</a>
+                     
 
                     </div>
                     <h4 class="page-title">135 Usuarios</h4>
@@ -342,455 +400,455 @@ p.inbox-item-date.informe{
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Garrett Winters</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Garrett Winters</td>
                                         <td>Estudiante</td>
                                         <td>Activo</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Ashton Cox</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Ashton Cox</td>
                                         <td>Profesor</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Cedric Kelly</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Cedric Kelly</td>
                                         <td>Estudiante</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Airi Satou</a> </td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Airi Satou</a> </td>
                                         <td>Administrador</td>
                                         <td>Activo</td>
                                        <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Brielle Williamson</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Brielle Williamson</td>
                                         <td>Profesor</td>
                                         <td>Activado</td>
                                           <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Herrod Chandler</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Herrod Chandler</td>
                                         <td>Administrador</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                        <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                        <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Rhona Davidson</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Rhona Davidson</td>
                                         <td>Profesor</td>
                                         <td>Activo</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Colleen Hurst</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Colleen Hurst</td>
                                         <td>Estudiante</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Sonya Frost</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Sonya Frost</td>
                                         <td>Administrador</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jena Gaines</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jena Gaines</td>
                                         <td>Estudiante</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Quinn Flynn</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Quinn Flynn</td>
                                         <td>Coordinador</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Charde Marshall</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Charde Marshall</td>
                                         <td>Profesor</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Haley Kennedy</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Haley Kennedy</td>
                                         <td>Administrador</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Tatyana Fitzpatrick</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Tatyana Fitzpatrick</td>
                                         <td>Estudiante</td>
                                         <td>Desactivado</td>
                                        <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Michael Silva</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Michael Silva</td>
                                         <td>Administrador</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Paul Byrd</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Paul Byrd</td>
                                         <td>Profesor</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Gloria Little</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Gloria Little</td>
                                         <td>Estudiante</td>
                                         <td>Activado</td>
                                        <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Bradley Greer</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Bradley Greer</td>
                                         <td>Administrador</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Dai Rios</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Dai Rios</td>
                                         <td>Estudiante</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                        <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jenette Caldwell</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jenette Caldwell</td>
                                         <td>Coordinador</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Yuri Berry</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Yuri Berry</td>
                                         <td>Profesor</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Caesar Vance</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Caesar Vance</td>
                                         <td>Estudiante</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Doris Wilder</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Doris Wilder</td>
                                         <td>Administrador</td>
                                         <td>Sidney</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Angelica Ramos</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Angelica Ramos</td>
                                         <td>Estudiante</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                        <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                        <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Gavin Joyce</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Gavin Joyce</td>
                                         <td>Profesor</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jennifer Chang</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jennifer Chang</td>
                                         <td>Administrador</td>
                                         <td>Singapore</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Brenden Wagner</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Brenden Wagner</td>
                                         <td>Estudiante</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Fiona Green</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Fiona Green</td>
                                         <td>Chief Operating Officer (COO)</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Shou Itou</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Shou Itou</td>
                                         <td>Regional Marketing</td>
                                         <td>Activo</td>
                                         <td>2011/04/25</td>
                                        <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Michelle House</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Michelle House</td>
                                         <td>Integration Specialist</td>
                                         <td>Sidney</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Suki Burks</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Suki Burks</td>
                                         <td>Developer</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Prescott Bartlett</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Prescott Bartlett</td>
                                         <td>Technical Author</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Gavin Cortez</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Gavin Cortez</td>
                                         <td>Team Leader</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                        <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Martena Mccray</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Martena Mccray</td>
                                         <td>Post-Sales support</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Unity Butler</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Unity Butler</td>
                                         <td>Marketing Designer</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Howard Hatfield</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Howard Hatfield</td>
                                         <td>Office Manager</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                        <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Hope Fuentes</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Hope Fuentes</td>
                                         <td>Secretary</td>
                                         <td>Activado</td>
                                        <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Vivian Harrell</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Vivian Harrell</td>
                                         <td>Financial Controller</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Timothy Mooney</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Timothy Mooney</td>
                                         <td>Profesor</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                        <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jackson Bradshaw</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jackson Bradshaw</td>
                                         <td>Director</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                        <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                        <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Olivia Liang</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Olivia Liang</td>
                                         <td>Support Engineer</td>
                                         <td>Singapore</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Bruno Nash</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Bruno Nash</td>
                                         <td>Coordinador</td>
                                         <td>Desactivado</td>
                                        <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Sakura Yamamoto</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Sakura Yamamoto</td>
                                         <td>Support Engineer</td>
                                         <td>Activo</td>
                                         <td>2011/04/25</td>
                                        <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Thor Walton</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Thor Walton</td>
                                         <td>Developer</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                        <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Finn Camacho</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Finn Camacho</td>
                                         <td>Support Engineer</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Serge Baldwin</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Serge Baldwin</td>
                                         <td>Data Coordinator</td>
                                         <td>Singapore</td>
                                         <td>2011/04/25</td>
                                        <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Zenaida Frank</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Zenaida Frank</td>
                                         <td>Administrador</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Zorita Serrano</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Zorita Serrano</td>
                                         <td>Profesor</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jennifer Acosta</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jennifer Acosta</td>
                                         <td>Estudiante</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Cara Stevens</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Cara Stevens</td>
                                         <td>Profesor</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Hermione Butler</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Hermione Butler</td>
                                         <td>Administrador</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Lael Greer</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Lael Greer</td>
                                         <td>Coordinador</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jonas Alexander</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Jonas Alexander</td>
                                         <td>Estudiante</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Shad Decker</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Shad Decker</td>
                                         <td>Coordinador</td>
                                         <td>Desactivado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Michael Bruce</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Michael Bruce</td>
                                         <td>Administrador</td>
                                         <td>Singapore</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                    <tr>
-                                        <td><a class="usuarios" href="#custom-modal" data-animation="letmein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Donna Snider</td>
+                                        <td><a class="usuarios" href="#custom-modal" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="100" data-overlaycolor="#36404a">Donna Snider</td>
                                         <td>Estudiante</td>
                                         <td>Activado</td>
                                         <td>2011/04/25</td>
                                         <td><span class="m-l-5"><i class="ion-document-text"></i></span></td>
-                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation"></i></span> </td>
+                                         <td><span class="m-l-5"><i class="fa fa-cog"></i></span> <span class="m-l-5"><i class="ion-flag"></i></span><span class="m-l-5"><i class="ion-playstation ver"></i></span> </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -935,10 +993,10 @@ p.inbox-item-date.informe{
                                         <a href="#">
                                             <div class="inbox-item">
                                                 <div class="inbox-item-img"><img src="assets/images/users/avatar-1.jpg" class="img-circle" alt=""></div>
-                                                <p class="inbox-item-author perfil">Chadengle</p>
-                                                <p class="inbox-item-text">Hey! there I'm available...</p>
+                                                <p class="inbox-item-author perfil">Alam Samuel </p>
+                                                <p class="inbox-item-text">Administrador</p>
                                                 <p class="inbox-item-text">
-                                                  <span class="timeline-icon bg-danger"></span>
+                                                  <span class="timeline-icon bg-success"></span>
 
                                                 </p>
                                                 <p class="inbox-item-date activar">desactivar cuenta</p>
@@ -946,17 +1004,17 @@ p.inbox-item-date.informe{
                                                 <p class="inbox-item-date perfil"> 
                                                 <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2" data-size="small"/>
                                                 </p>
-                                                  <p class="inbox-item-date informe">Ver informe <i class="ion-document-text"></i></p>
+                                                  <p class="inbox-item-date informe"><a href="https://docs.google.com/viewerng/viewer?url=http://librosonlineparaleer.com/wp-content/uploads/2016/12/Pellizcos-de-Navidad-Lara-Rivendel-Dona-Ter.pdf&hl=es" target="_blank">Ver informe</a>﻿ <i class="ion-document-text"></i></p>
                                             </div>
                                         </a>
                                       
                     </div></div>
                     <div class="custom-modal-text">
-                       <section id="steps-uid-1-p-1" role="tabpanel" aria-labelledby="steps-uid-1-h-1" class="body current" aria-hidden="false" style="display: block; left: 0px; width: 545px">
+                       <section id="steps-uid-1-p-1" role="tabpanel" aria-labelledby="steps-uid-1-h-1" class="body current" aria-hidden="false" style="display: block; left: 0px; ">
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group clearfix">
-                                                            <label for="name2"> First name *</label>
+                                                            <label for="name2">Nombre</label>
                                                             <div>
                                                                 <input id="name2" name="name" type="text" class="required form-control" aria-required="true">
                                                             </div>
@@ -964,7 +1022,7 @@ p.inbox-item-date.informe{
                                                     </div>
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group clearfix">
-                                                            <label for="surname2"> Last name *</label>
+                                                            <label for="surname2"> Apellido</label>
                                                             <div>
                                                                 <input id="surname2" name="surname" type="text" class="required form-control" aria-required="true">
                                                             </div>
@@ -974,7 +1032,7 @@ p.inbox-item-date.informe{
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group clearfix">
-                                                            <label for="email2">Email *</label>
+                                                            <label for="email2">Email</label>
                                                             <div>
                                                                 <input id="email2" name="email" type="text" class="required email form-control" aria-required="true">
                                                             </div>
@@ -982,7 +1040,7 @@ p.inbox-item-date.informe{
                                                     </div>
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group clearfix">
-                                                            <label for="address2">Address </label>
+                                                            <label for="address2">Rol </label>
                                                             <div>
                                                                 <input id="address2" name="address" type="text" class="form-control">
                                                             </div>
@@ -991,28 +1049,119 @@ p.inbox-item-date.informe{
 
                                                     <div class="col-xs-12 col-sm-12">
                                                         <div class="form-group clearfix">
-                                                            <label for="address2">Address </label>
-                                                          <textarea id="textarea" class="form-control" maxlength="225" rows="3" placeholder="This textarea has a limit of 225 chars."></textarea>
+                                                            <label for="address2">Comentario </label>
+                                                          <textarea id="textarea" class="form-control" maxlength="225" rows="3" ></textarea>
                                                         </div>
                                                     </div>
 
 
 
                                                 </div><!-- end row -->
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-6">
-                                                        <div class="form-group clearfix">
-                                                            <label class="col-lg-12 control-label ">(*) Mandatory</label>
+
+                                               <div class="modal-footer noline">
+                                            <button type="button" class="btn btn-secondary waves-effect ver" data-dismiss="modal">Eliminar</button>
+                                            <button type="button" class="btn btn-primary waves-effect waves-light">guardar cambios</button>
+                                        </div> 
+
+                                            <div class="blurdiv ">
+                                              <div class="modalask">
+                                               <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            Estas seguro que quieres eliminar este usuario?
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                      <div class="col-xs-12 col-sm-12">
+                                                            
+
+                                                        <div class="button-list">
+                                                          <button class="btn btn-primary waves-effect waves-light btn-md">SI</button>
+
+                                                          <button type="button" class="btn btn-secondary waves-effect waves-light btn-md cerrar">NO</button>
                                                         </div>
+                                                      </div>
                                                     </div>
-                                                </div><!-- end row -->
-
-
+                                        </div>
+                                    </div>
+                                              </div>
+                                            </div>
 
                                             </section>
                     </div>
                 </div>
 
+                                          <!-- sample modal content -->
+                           
+                                    <div id="custom-modal1" class="modal-demo">
+                                <div class="custom-modal-dialog">
+                                    <div class="custom-modal-content">
+                                        <div class="custom-modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="custom-modal-title" id="myModalLabel">Agregar usuario</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                              <div class="custom-modal-text">
+                       <section id="steps-uid-1-p-1" role="tabpanel" aria-labelledby="steps-uid-1-h-1" class="body current" aria-hidden="false" style="display: block; left: 0px; ">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <div class="form-group clearfix">
+                                                            <label for="name2">Nombre</label>
+                                                            <div>
+                                                                <input id="name2" name="name" type="text" class="required form-control" aria-required="true">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <div class="form-group clearfix">
+                                                            <label for="surname2"> Apellido</label>
+                                                            <div>
+                                                                <input id="surname2" name="surname" type="text" class="required form-control" aria-required="true">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end row -->
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <div class="form-group clearfix">
+                                                            <label for="email2">Email</label>
+                                                            <div>
+                                                                <input id="email2" name="email" type="text" class="required email form-control" aria-required="true">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-6">
+                                                        <div class="form-group clearfix">
+                                                            <label for="address2">Rol </label>
+                                                            <div>
+                                                                <input id="address2" name="address" type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xs-12 col-sm-12">
+                                                        <div class="form-group clearfix">
+                                                            <label for="address2">Comentario </label>
+                                                          <textarea id="textarea" class="form-control" maxlength="225" rows="3" ></textarea>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div><!-- end row -->
+
+                                            
+
+                                            </section>
+                    </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="button" class="btn btn-primary waves-effect waves-light">Guardar cambios</button>
+                                        </div>
+                                    </div><!-- /.modal-content -->
+                                </div><!-- /.modal-dialog -->
+                            </div><!-- /.modal -->
 
         <script>
             var resizefunc = [];
@@ -1064,9 +1213,31 @@ p.inbox-item-date.informe{
                         .appendTo('#datatable-buttons_wrapper .col-md-6:eq(0)');
             } );
 
+
         </script>
 
+        <script>
 
+$('span.switchery.switchery-small').click(function(){
+  $('.timeline-icon').toggleClass('bg-danger bg-success');
+});
+
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    
+    $(".ver").click(function(){
+        $(".blurdiv").fadeIn("slow");
+    });
+    
+    $(".cerrar").click(function(){
+        $(".blurdiv").fadeOut("fast");
+    });
+  
+});
+</script>
 
 
 
