@@ -21580,6 +21580,8 @@ div.sender-main {
   display: block; }
 div.sender-main .sender-img {
   overflow: auto; }
+div.sender-main h6.sender-name {
+  margin-bottom: 3em; }
 div.sender-main .sender-main-date {
   color: #ccc; }
 
@@ -21598,5 +21600,14 @@ div.sender-reply-bottom span:hover {
 
 div.sender-reply-body textarea {
   border-color: #fff; }
+
+#shit {
+  border: 2px solid red; }
+
+.solicitudes-card img.solicitudes-card-img {
+  margin-bottom: 0em; }
+
+.tabs-right .nav-tabs .nav-link.active, .tabs-right .nav-tabs .nav-link.active:focus, .tabs-right .nav-tabs .nav-link.active:hover, .tabs-right .nav-tabs .nav-item.open .nav-link, .tabs-right .nav-tabs .nav-item.open .nav-link:focus, .tabs-right .nav-tabs .nav-item.open .nav-link:hover {
+  background-color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
