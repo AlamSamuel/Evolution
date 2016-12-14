@@ -21609,5 +21609,11 @@ div.sender-reply-body textarea {
 
 .tabs-right .nav-tabs .nav-link.active, .tabs-right .nav-tabs .nav-link.active:focus, .tabs-right .nav-tabs .nav-link.active:hover, .tabs-right .nav-tabs .nav-item.open .nav-link, .tabs-right .nav-tabs .nav-item.open .nav-link:focus, .tabs-right .nav-tabs .nav-item.open .nav-link:hover {
   background-color: #fff; }
+.tabs-right .form-control {
+  border: 1px solid #fff;
+  border-bottom: 1px solid rgba(67, 89, 102, 0.1);
+  margin-bottom: 1em; }
+.tabs-right .form-control i {
+  top: -10px; }
 
 /*# sourceMappingURL=style.css.map */
