@@ -21616,4 +21616,7 @@ div.sender-reply-body textarea {
 .tabs-right .form-control i {
   top: -10px; }
 
+span.check {
+  border: 1px solid red; }
+
 /*# sourceMappingURL=style.css.map */
