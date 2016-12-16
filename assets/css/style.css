@@ -21590,6 +21590,8 @@ div.sender-main .sender-main-date {
 
 div.sender-reply h6.sender-reply-option {
   border-bottom: 1px solid rgba(67, 89, 102, 0.1); }
+div.sender-reply h6.sender-reply-option:hover {
+  cursor: pointer; }
 div.sender-reply h6.sender-reply-option span {
   border-bottom: 1px solid #ccc; }
 
