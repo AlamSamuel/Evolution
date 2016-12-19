@@ -213,7 +213,7 @@
 
                 <div class="col-xs-12 col-md-7 col-lg-7
                 bord-left bord-right">
-                <div class="sender-main">
+                <div class="row sender-main">
 
                   <h6 class="sender-name">
                     <img class="img-circle sender-name" src="assets/images/users/avatar-1.jpg"
@@ -248,29 +248,35 @@
 
                 <hr>
 
-                <div class="sender-reply">
+                <div class=" row sender-reply">
                   <h6 class="sender-reply-option"><span>Responder</span></h6>
-                  <div class="sender-reply-body">
+                  <div class="sender-reply-body test">
                     <!--text are to replay and stuff-->
+                    <div class="sender-reply-messageArea">
+
+
                     <textarea class="col-xs-12 col-md-12 col-lg-12" name="name" rows="8" cols="110"></textarea>
 
                     <div class="sender-reply-bottom">
                       <h6 class="pull-right"><span>Attatch</span>
 
                         <span class="label label-pill label-primary reply-enviar"
-                        type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                        type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#reply-sent">
                           Enviar</a>
                         </span>
                         <!-- Button trigger modal -->
 
                       </h6>
                     </div><!-- /bottom de sender reply-->
+                      </div>
+
                   </div><!--/ reply sender-->
 
                   </div>
 
 
                 </div>
+
 
         <div class="col-xs-12 col-md-12 col-lg-3 tabs-right">
 
@@ -541,18 +547,23 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="reply-sent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel"></h4>
               </div>
-              <div class="modal-body">
-                Su mensaje ha sido enviado!
+              <div class="center-me">
+                <div class="monkey-center">
+                  <img src="assets/images/logo-06.svg" class="monkey-ready" alt="monkey">
+                  <br>
+                  <h5 class="lead"> ¡ Tu mensaje ha sido enviado ! </h5>
+                </div>
+
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
 
               </div>
             </div>
