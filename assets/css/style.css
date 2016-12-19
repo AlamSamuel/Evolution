@@ -4958,9 +4958,12 @@ File: Menu
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  line-height: 60px; }
+  line-height: 60px; 
+  display: inline-flex;
+}
   .logo span span {
-    color: #1bb99a !important; }
+    color: #1bb99a !important;
+    \ }
 
 #topnav {
   position: fixed;
@@ -22609,13 +22612,12 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
         background-color: #ffffff;
         box-shadow: 0 0px 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
     }
-    .logo_monkey {
-        width: 45px;
-        height: 45px;
-        margin: 12px 35px 0px 0px;
-        background-image: url(assets/images/logo-06.svg);
-    }
-
+  .logo_monkey {
+    width: 179px;
+    height: 45px;
+    margin: 9px 25px 16px 0px;
+    background-image: url(logo-05.svg);
+}
     .wrapper {
         padding-top: 80px;
     }
@@ -22796,4 +22798,9 @@ p.inbox-item-date.informe {
     position: initial;
 }
 
+}
+@media screen and (max-width: 1270px) {
+.container {
+    width: 90%;
+}
 }
