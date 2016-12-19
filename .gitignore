@@ -1,3 +1,6 @@
-Hello!
-Hello!
-Adios
+vendor/
+<<<<<<< HEAD
+=======
+resources/views/evaluation2/estudiante/resultadoExamen.blade.php
+resources/views/evaluation2/listaCursoProfesor.blade.php
+>>>>>>> 58b881be1468432f0fd1497c0981e11169b74e29
