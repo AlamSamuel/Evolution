@@ -21560,28 +21560,35 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
 
 div.img-center {
   padding-top: 2em; }
+
 div.img-center img {
   display: block;
   margin: 0 auto;
   margin-top: 1em; }
+
 div.img-center h6 {
   text-align: center;
   transition: color 0.55s ease; }
+
 div.img-center h6:hover {
   cursor: pointer;
   color: #039cfd; }
 
 div#usr-config input, div#usr-config h6, div#usr-config img {
   margin-bottom: 3em; }
+
 div#usr-config button.btn.btn-secondary {
   margin-top: 1em; }
 
 div.sender-main {
   display: block; }
+
 div.sender-main .sender-img {
   overflow: auto; }
+
 div.sender-main h6.sender-name {
   margin-bottom: 3em; }
+
 div.sender-main .sender-main-date {
   color: #ccc; }
 
@@ -21590,13 +21597,16 @@ div.sender-main .sender-main-date {
 
 div.sender-reply h6.sender-reply-option {
   border-bottom: 1px solid rgba(67, 89, 102, 0.1); }
+
 div.sender-reply h6.sender-reply-option:hover {
   cursor: pointer; }
+
 div.sender-reply h6.sender-reply-option span {
   border-bottom: 1px solid #ccc; }
 
 div.sender-reply-bottom span {
   margin-left: 1em; }
+
 div.sender-reply-bottom span:hover {
   cursor: pointer; }
 
@@ -21611,10 +21621,12 @@ div.sender-reply-body textarea {
 
 .tabs-right .nav-tabs .nav-link.active, .tabs-right .nav-tabs .nav-link.active:focus, .tabs-right .nav-tabs .nav-link.active:hover, .tabs-right .nav-tabs .nav-item.open .nav-link, .tabs-right .nav-tabs .nav-item.open .nav-link:focus, .tabs-right .nav-tabs .nav-item.open .nav-link:hover {
   background-color: #fff; }
+
 .tabs-right .form-control {
   border: 1px solid #fff;
   border-bottom: 1px solid rgba(67, 89, 102, 0.1);
   margin-bottom: 1em; }
+
 .tabs-right .form-control i {
   top: -10px; }
 
@@ -21623,14 +21635,17 @@ span.check {
 
 .center-me {
   margin: 0 auto !important; }
+
 .center-me img {
   display: block;
   margin: 0 auto !important; }
 
 #reply-sent .modal-header {
   border: none; }
+
 #reply-sent .modal-footer {
   border: none; }
+
 #reply-sent h5.lead {
   text-align: center;
   margin: 1.5em auto; }
@@ -21654,6 +21669,5 @@ span.check {
     transform: translate3d(-4px, 0, 0); }
   40%, 60% {
     transform: translate3d(4px, 0, 0); } }
-
 
 /*# sourceMappingURL=style.css.map */
