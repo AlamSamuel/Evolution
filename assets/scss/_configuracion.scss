@@ -1,0 +1,30 @@
+.bord-right {
+  border-right: 1px solid rgba(67, 89, 102, 0.1); }
+
+.bord-bottom {
+  border-bottom: 1px solid rgba(67, 89, 102, 0.1); }
+
+.bord-top {
+  border-top: 1px solid rgba(67, 89, 102, 0.1); }
+
+.bord-left {
+  border-left: 1px solid rgba(67, 89, 102, 0.1); }
+
+.bord-all {
+  border: 1px solid rgba(67, 89, 102, 0.1); }
+
+.top-tit {
+  margin-top: 3em; }
+
+div.img-center {
+  padding-top: 2em; }
+div.img-center img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em; }
+div.img-center h6 {
+  text-align: center;
+  transition: color 0.55s ease; }
+div.img-center h6:hover {
+  cursor: pointer;
+  color: #039cfd; }
