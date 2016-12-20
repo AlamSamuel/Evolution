@@ -799,7 +799,7 @@
                         <div class="inbox-widget nicescroll" >
                                         <a href="#">
                                             <div class="inbox-item">
-                                                <div class="inbox-item-img"><img src="assets/images/users/avatar-1.jpg" class="img-circle" alt=""></div>
+                                                <div class="inbox-item-img" style="width: 105px;"><img src="assets/images/users/avatar-1.jpg" class="img-circle perfil" alt=""></div>
                                                 <p class="inbox-item-author perfil">Alam Samuel </p>
                                                 <p class="inbox-item-text">Administrador</p>
                                                 <p class="inbox-item-text">
@@ -910,14 +910,15 @@
                                         <div class="modal-body">
                                               <div class="custom-modal-text">
                        <section id="steps-uid-1-p-1" role="tabpanel" aria-labelledby="steps-uid-1-h-1" class="body current" aria-hidden="false" style="display: block; left: 0px; ">
+
+                        <form action="#" data-parsley-validate novalidate>
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-6">
-                                                        <div class="form-group clearfix">
-                                                            <label for="name2">Nombre</label>
-                                                            <div>
-                                                                <input id="name2" name="name" type="text" class="required form-control" aria-required="true">
-                                                            </div>
-                                                        </div>
+                                                          <div class="form-group">
+                                                <label for="userName">Nombre<span class="text-danger">*</span></label>
+                                                <input type="text" name="nick" parsley-trigger="change" required
+                                                       placeholder="Enter user name" class="form-control" id="userName">
+                                            </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group clearfix">
@@ -928,20 +929,21 @@
                                                         </div>
                                                     </div>
                                                 </div><!-- end row -->
+
+
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-6">
-                                                        <div class="form-group clearfix">
-                                                            <label for="email2">Email</label>
-                                                            <div>
-                                                                <input id="email2" name="email" type="text" class="required email form-control" aria-required="true">
-                                                            </div>
-                                                        </div>
+                                                        <div class="form-group">
+                                                <label for="emailAddress">Email address<span class="text-danger">*</span></label>
+                                                <input type="email" name="email" parsley-trigger="change" required
+                                                       placeholder="Enter email" class="form-control" id="emailAddress">
+                                            </div>
                                                     </div>
-                                                    <div class="col-xs-12 col-sm-6">
+                                                   <div class="col-xs-12 col-sm-6">
                                                         <div class="form-group clearfix">
-                                                            <label for="address2">Rol </label>
+                                                            <label for="email2">Rol</label>
                                                             <div>
-                                                                <input id="address2" name="address" type="text" class="form-control">
+                                                                <input id="email2" name="email" type="text" class="required form-control" aria-required="true">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -949,23 +951,23 @@
                                                     <div class="col-xs-12 col-sm-12">
                                                         <div class="form-group clearfix">
                                                             <label for="address2">Comentario </label>
-                                                          <textarea id="textarea" class="form-control" maxlength="225" rows="3" ></textarea>
+                                                          <textarea id="textarea" class="required form-control" maxlength="225" rows="3" aria-required="true"></textarea>
                                                         </div>
-                                                    </div>
+                                                   </div>
 
-
-
-                                                </div><!-- end row -->
-
-                                            
-
+                                               </div><!-- end row -->
+                                                   <div class="modal-footer">
+                                               <button class="btn btn-primary waves-effect waves-light" type="submit">
+                                                   Guardar
+                                                </button>
+                                               
+                                             </div>
+                                                 </form>
                                             </section>
                     </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            
-                                            <button type="button" class="btn btn-primary waves-effect waves-light">Guardar</button>
-                                        </div>
+                                    
+
                                     </div><!-- /.modal-content -->
                                 </div><!-- /.modal-dialog -->
                             </div><!-- /.modal -->
@@ -1000,6 +1002,9 @@
 
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
+
+         <!-- Validation js (Parsleyjs) -->
+        <script type="text/javascript" src="assets/plugins/parsleyjs/parsley.min.js"></script>
 
 
         <!-- Modal-Effect -->

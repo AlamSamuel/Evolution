@@ -22613,10 +22613,10 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
         box-shadow: 0 0px 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
     }
   .logo_monkey {
-    width: 179px;
+    width: 45px;
     height: 45px;
-    margin: 9px 25px 16px 0px;
-    background-image: url(logo-05.svg);
+    margin: 12px 35px 0px 0px;
+    background-image: url(logo-06.svg);
 }
     .wrapper {
         padding-top: 80px;
@@ -22643,20 +22643,7 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
     cursor: pointer;
     }
 
-    .card.card-block.text-xs-center:hover {
-    background: #039cfd;
-    color: white;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    }
-
-
-    .usu:hover {
-    color: white;
-    }
+   
 
     #topnav .topbar-main {
         background-color: #ffffff;
@@ -22693,7 +22680,11 @@ td.dataTables_empty {
     padding: 55px !IMPORTANT;
 }
 
-.inbox-widget .inbox-item .inbox-item-img,  .inbox-widget .inbox-item img {
+img.img-circle.perfil{
+   width: 105px !important;
+}
+
+  .inbox-widget .inbox-item img.img-circle.perfil {
     width: 105px !important;
 }
 
@@ -22722,10 +22713,7 @@ span.timeline-icon.bg-danger, span.timeline-icon.bg-success {
 
     color: #2b3d51;
 }
- 
-      .usu:hover {
-    color: white;
-    }
+
 .modal-footer.noline {
     padding: 25px 0 10px;
     text-align: right;
@@ -22782,6 +22770,9 @@ p.inbox-item-date.informe {
     margin: -20px 0;
     display: block;
 }
+
+
+
 .modalask {
     width: 365px;
     margin: 21vh auto;
