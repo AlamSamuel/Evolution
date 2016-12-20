@@ -16,14 +16,13 @@ $(function(){
   //    });
   //  });
 
+
   $h6.click((function() {
     var i = 0;
     return function() {
         $(this).animate({
-            height: (++i % 2) ? 40 : 10
-        }, 200);
+            height: (++i % 2) ? 40 : 10}, 200);
     }
 })());
-
 
 });//end of wrap up
