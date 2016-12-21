@@ -16,7 +16,8 @@ $(function(){
   //  });
    $('a[href="#todos"]').on('click', function(){
      //console.log("shit ain't working yo");
-     $('#todos div.inbox-widget').clone().append($('a div.solicitudes-item'), $('a div.support-item'));
+     //$('#todos div.inbox-widget').clone().append($('a div.solicitudes-item'), $('a div.support-item'));
+     $('a div.solicitudes-item').clone().appendTo('#todos div.inbox-widget');
    });
 
 });//end of wrap up
