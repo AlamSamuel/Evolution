@@ -1,29 +1,22 @@
 $(function(){
 
-
   var $h6 = $("h6.sender-reply-option");
-  var $divReply = $(".sender-reply-body");
-
    $h6.on('click', function(){
-     //$divReply.height('200px');
+     var $divReply = $(".sender-reply-body");
      $divReply.animate({height: 200}, 500);
    });//end of click event on reply
 
-  //  $h6.on('click', function(){
-  //    $divReply.toggle(function(){
-  //      $(this).animate({height: 168}, 500)
-  //    },function(){
-  //      $(this).animate({height: 0}, 500)
-  //    });
-  //  });
-
-
-//   $h6.click((function() {
-//     var i = 0;
-//     return function() {
-//         $(this).animate({
-//             height: (++i % 2) ? 40 : 10}, 200);
-//     }
-// })());
+   $('a[href="#solicitudes"]').on('click', function(){
+     //console.log("shit ain't working yo");
+     $('#solicitudes div.inbox-widget').show($('a div.solicitudes-item'));
+   });
+   $('a[href="#support"]').on('click', function(){
+     //console.log("shit ain't working yo");
+     $('#todos div.inbox-widget').show($('a div.support-item'));
+   });
+   $('a[href="#todos"]').on('click', function(){
+     //console.log("shit ain't working yo");
+     $('#todos div.inbox-widget').append($('a div.solicitudes-item'), $('a div.support-item'));
+   });
 
 });//end of wrap up
