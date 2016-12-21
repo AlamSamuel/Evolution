@@ -21614,7 +21614,9 @@ span.check {
   margin: 1.5em auto; }
 
 .sender-reply-body {
-  overflow: hidden; }
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.5 ease; }
 
 .monkey-ready {
   margin: 0 auto;

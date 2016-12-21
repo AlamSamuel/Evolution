@@ -64,6 +64,8 @@ span.check {
 
   .sender-reply-body{
     overflow: hidden;
+    height: 0px;
+    transition: all 0.5 ease;
   }
 
 .monkey-ready {
