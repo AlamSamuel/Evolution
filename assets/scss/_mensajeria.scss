@@ -36,7 +36,12 @@ div.sender-reply-body textarea {
 .solicitudes-card img.solicitudes-card-img {
   margin-bottom: 0em; }
 
-.tabs-right .nav-tabs .nav-link.active, .tabs-right .nav-tabs .nav-link.active:focus, .tabs-right .nav-tabs .nav-link.active:hover, .tabs-right .nav-tabs .nav-item.open .nav-link, .tabs-right .nav-tabs .nav-item.open .nav-link:focus, .tabs-right .nav-tabs .nav-item.open .nav-link:hover {
+.tabs-right .nav-tabs .nav-link.active,
+.tabs-right .nav-tabs .nav-link.active:focus,
+.tabs-right .nav-tabs .nav-link.active:hover,
+.tabs-right .nav-tabs .nav-item.open .nav-link,
+ .tabs-right .nav-tabs .nav-item.open .nav-link:focus,
+ .tabs-right .nav-tabs .nav-item.open .nav-link:hover {
   background-color: #fff; }
 .tabs-right .form-control {
   border: 1px solid #fff;
