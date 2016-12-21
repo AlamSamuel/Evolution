@@ -21640,6 +21640,24 @@ span.check {
 .test {
   border: 1px solid red; }
 
+div.inbox-widget.nicescroll {
+  max-height: 610px;
+  overflow: hidden; }
+
+.sender-body {
+  max-height: 612px;
+  padding-bottom: 6em;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+.sender-body::-webkit-scrollbar {
+  width: 0.5em; }
+.sender-body::-webkit-scrollbar-track {
+  opacity: 0;
+  transition: opacity 0.5s ease; }
+.sender-body::-webkit-scrollbar-thumb {
+  background-color: #98a6ad;
+  transition: opacity 0.5s ease; }
+
 .bord-right {
   border-right: 1px solid rgba(67, 89, 102, 0.1); }
 

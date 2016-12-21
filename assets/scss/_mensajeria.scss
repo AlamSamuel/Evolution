@@ -97,3 +97,29 @@ $test: red;
     .test{
       border: 1px solid $test;
     }
+
+    div.inbox-widget.nicescroll{
+        max-height: 610px;
+      overflow: hidden;
+    }
+    .sender-body{
+      max-height: 612px;
+      padding-bottom: 6em;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+&::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+&::-webkit-scrollbar-track {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+&::-webkit-scrollbar-thumb {
+  background-color: rgb(152, 166, 173);
+  transition: opacity 0.5s ease;
+
+}
+    }
