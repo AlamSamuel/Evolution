@@ -6,17 +6,17 @@ $(function(){
      $divReply.animate({height: 200}, 500);
    });//end of click event on reply
 
-   $('a[href="#solicitudes"]').on('click', function(){
-     //console.log("shit ain't working yo");
-     $('#solicitudes div.inbox-widget').show($('a div.solicitudes-item'));
-   });
-   $('a[href="#support"]').on('click', function(){
-     //console.log("shit ain't working yo");
-     $('#todos div.inbox-widget').show($('a div.support-item'));
-   });
+  //  $('a[href="#solicitudes"]').on('click', function(){
+  //    //console.log("shit ain't working yo");
+  //    $('#solicitudes div.inbox-widget').show($('a div.solicitudes-item'));
+  //  });
+  //  $('a[href="#support"]').on('click', function(){
+  //    //console.log("shit ain't working yo");
+  //    $('#todos div.inbox-widget').show($('a div.support-item'));
+  //  });
    $('a[href="#todos"]').on('click', function(){
      //console.log("shit ain't working yo");
-     $('#todos div.inbox-widget').append($('a div.solicitudes-item'), $('a div.support-item'));
+     $('#todos div.inbox-widget').clone().append($('a div.solicitudes-item'), $('a div.support-item'));
    });
 
 });//end of wrap up
