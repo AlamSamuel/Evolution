@@ -1,0 +1,27 @@
+.divider-b::after{
+  width: 100%;
+  content: "";
+  height: 1px;
+  display: block;
+  border-bottom: 1px solid rgba(67, 89, 102, 0.1);
+  margin-top: 14px;
+}
+.divider-t::before{
+  width: 100%;
+  content: "";
+  height: 1px;
+  display: block;
+  border-top: 1px solid rgba(67, 89, 102, 0.1);
+  margin-top: 14px;
+}
+.divider-r::after{
+  height: 100%;
+  content: "";
+  width: 1px;
+  border-right: 1px solid rgba(67, 89, 102, 0.1);
+}
+
+.question-box {
+  align-items: center;
+  height: 70px;
+}
